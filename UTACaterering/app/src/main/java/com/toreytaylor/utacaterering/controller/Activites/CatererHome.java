@@ -2,10 +2,7 @@ package com.toreytaylor.utacaterering.controller.Activites;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.toreytaylor.utacaterering.R;
-import com.toreytaylor.utacaterering.controller.Fragments.RequestEvent;
 import com.toreytaylor.utacaterering.model.Objects.SystemUser;
 
 import static com.toreytaylor.utacaterering.controller.Activites.MainLogin.SYSTEM_USER;
