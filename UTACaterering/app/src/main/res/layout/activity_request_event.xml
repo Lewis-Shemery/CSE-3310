@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:scrollbars="vertical"
+    tools:context=".controller.Fragments.RequestEvent">
+
+    <EditText
+        android:id="@+id/nameOfEvent"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Name of Event"/>
+
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:focusable="false"
+            android:hint="Enter Date"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Time"
+            android:clickable="false"
+            android:focusable="false"/>
+        <Spinner
+            android:id="@+id/startTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        android:clickable="false"
+        android:focusable="false"/>
+
+        <Spinner
+            android:id="@+id/endTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+
+
+    <EditText
+        android:id="@+id/sizeOfParty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Size of Party"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formality"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <Spinner
+        android:id="@+id/formality"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Type"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <Spinner
+        android:id="@+id/mealType"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drink Venue"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    <Spinner
+        android:id="@+id/drinkVenue"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="Submit"/>
+
+</LinearLayout>
