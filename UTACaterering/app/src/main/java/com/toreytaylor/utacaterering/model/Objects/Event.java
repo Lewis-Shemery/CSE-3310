@@ -23,7 +23,7 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
 public class Event {
     @NonNull
     @PrimaryKey
-    private final String eventId ;
+    private final String eventId;
 
     private String nameOfEvent;
 
@@ -100,7 +100,6 @@ public class Event {
     public String getMealType() {
         return mealType;
     }
-
 
     public void setStartTime(Long startTime) {
         this.startTime = startTime;

@@ -21,6 +21,8 @@
         <activity android:name=".controller.Activites.CustomerHome" />
         <activity android:name=".controller.Activites.ReservedEvents" />
         <activity android:name=".controller.Activites.PendingEvents" />
+        <activity android:name=".controller.Activites.StaffHome" />
+        <activity android:name=".controller.Activites.AssignedEvents" />
     </application>
 
 </manifest>

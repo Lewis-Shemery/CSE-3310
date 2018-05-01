@@ -79,7 +79,13 @@ public class MainLogin extends AppCompatActivity implements View.OnClickListener
             case "Customer":
                 intent.setClass(this, CustomerHome.class);
                 break;
-        }
+
+                case "Staff":
+                intent.setClass(this, StaffHome.class);
+                break;
+
+                }
+
         startActivity(intent);
         finish();
     }
