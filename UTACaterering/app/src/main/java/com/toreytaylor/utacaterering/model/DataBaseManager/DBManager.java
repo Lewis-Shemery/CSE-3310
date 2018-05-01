@@ -77,6 +77,7 @@ public class DBManager {
         }
 
         public List<Event> getList() {
+
             return events;
         }
 
@@ -84,6 +85,48 @@ public class DBManager {
         protected Boolean doInBackground(Void... voids){
 
             events = db.daoEvent().findCustomerEvents(userId);
+            return true;
+        }
+    }
+
+    public static class SearchReservedForCaterer extends AsyncTask<Void, Void, Boolean> {
+        private DataBase db;
+        private static List<Event> events;
+
+        public SearchReservedForCaterer(DataBase db){
+            this.db = db;
+        }
+
+        public List<Event> getList() {
+
+            return events;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids){
+
+            events = db.daoEvent().findCatererEvents(true);
+            return true;
+        }
+    }
+
+    public static class SearchPendingForCaterer extends AsyncTask<Void, Void, Boolean> {
+        private DataBase db;
+        private static List<Event> events;
+
+        public SearchPendingForCaterer(DataBase db){
+            this.db = db;
+        }
+
+        public List<Event> getList() {
+
+            return events;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids){
+
+            events = db.daoEvent().findCatererEvents(false);
             return true;
         }
     }

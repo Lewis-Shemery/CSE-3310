@@ -185,7 +185,7 @@ public class Event {
         this.approval = approval;
     }
 
-    public Boolean getApproval() {
+    public boolean getApproval() {
         return approval;
     }
 }

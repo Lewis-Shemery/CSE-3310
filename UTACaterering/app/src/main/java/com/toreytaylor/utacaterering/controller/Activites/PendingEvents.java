@@ -21,7 +21,7 @@ import java.util.List;
 
 import static com.toreytaylor.utacaterering.controller.Activites.MainLogin.SYSTEM_USER;
 
-public class ReservedEvents extends FragmentActivity{
+public class PendingEvents extends FragmentActivity{
     private Activity context;
     private List<Event> events;
     private SystemUser user;
@@ -52,38 +52,18 @@ public class ReservedEvents extends FragmentActivity{
 
     }
 
-    private List<Event> getEventList() {
-        if (user.getRole() == "Caterer") {
-            DBManager.SearchReservedForCaterer Search
-                    = new DBManager.SearchReservedForCaterer(DataBase.getInstance(this));
+    private List<Event> getEventList(){
+        DBManager.SearchPendingForCaterer Search
+                = new DBManager.SearchPendingForCaterer(DataBase.getInstance(this));
 
-            Search.execute();
+        Search.execute();
+        // TODO: 4/28/2018 add progress bar to slow down program
 
-            try{
-                Thread.sleep(1000);
-            }catch (InterruptedException e){
-                e.printStackTrace();
-            }
+        try {Thread.sleep(1000);}
+        catch (InterruptedException e){e.printStackTrace();}
 
-            return  Search.getList();
-        }
-        else {
-            DBManager.SearchEventForUser Search
-                    = new DBManager.SearchEventForUser(DataBase.getInstance(this),
-                    user.getUserId());
-
-            Search.execute();
-
-            try{
-                Thread.sleep(1000);
-            }catch (InterruptedException e){
-                e.printStackTrace();
-            }
-
-            return  Search.getList();
-        }
+        return  Search.getList();
     }
-
     private void printf(String message){
         Context context = this;
         CharSequence text = message;

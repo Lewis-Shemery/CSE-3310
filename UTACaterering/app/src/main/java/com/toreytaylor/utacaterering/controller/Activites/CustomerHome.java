@@ -17,8 +17,7 @@ import com.toreytaylor.utacaterering.model.Objects.SystemUser;
 
 import static com.toreytaylor.utacaterering.controller.Activites.MainLogin.SYSTEM_USER;
 
-public class CustomerHome extends AppCompatActivity implements View.OnClickListener
-{
+public class CustomerHome extends AppCompatActivity implements View.OnClickListener {
     private SystemUser customer;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;

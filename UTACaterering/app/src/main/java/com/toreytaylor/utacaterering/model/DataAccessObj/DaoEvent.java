@@ -20,4 +20,7 @@ public interface DaoEvent {
     @Query("SELECT * FROM Event where customerId LIKE :customerId")
     List<Event> findCustomerEvents(String customerId);
 
+    @Query("SELECT * FROM Event where approval LIKE :approval")
+    List<Event> findCatererEvents(Boolean approval);
+
 }
