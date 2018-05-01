@@ -66,6 +66,23 @@ public class DBManager {
         }
     }
 
+    public  static class DeleteEvent extends AsyncTask<Void, Void, Boolean> {
+        private DataBase db;
+        private Event event;
+
+        public DeleteEvent(DataBase db, Event event){
+            this.db = db;
+            this.event = event;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... voids){
+
+            db.daoEvent().deleteEvent(event.getEventId());
+            return true;
+        }
+    }
+
     public static class SearchEventForUser extends AsyncTask<Void, Void, Boolean> {
         private DataBase db;
         private String userId;
