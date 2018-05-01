@@ -6,7 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.toreytaylor.utacaterering.R;
@@ -15,10 +18,8 @@ import com.toreytaylor.utacaterering.model.Objects.SystemUser;
 
 import static com.toreytaylor.utacaterering.controller.Activites.MainLogin.SYSTEM_USER;
 
-public class CatererHome extends FragmentActivity {
+public class CatererHome extends AppCompatActivity implements View.OnClickListener {
     private SystemUser caterer;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,16 @@ public class CatererHome extends FragmentActivity {
 
         Intent intent = getIntent();
         caterer = (SystemUser) intent.getSerializableExtra(SYSTEM_USER);
+
+        //Get button id's
+        Button pendingEvents = findViewById(R.id.pendingEvents);
+        Button reservedEvents = findViewById(R.id.reservedEvents);
+        TextView logout = findViewById(R.id.logout);
+
+        //Set listeners for buttons
+        pendingEvents.setOnClickListener(this);
+        reservedEvents.setOnClickListener(this);
+        logout.setOnClickListener(this);
     }
 
     private void printf(String message){
@@ -38,7 +49,7 @@ public class CatererHome extends FragmentActivity {
         toast.show();
     }
 
-   // @Override
+    @Override
     public void onClick(View v) {
         int click = v.getId();
         switch (click){

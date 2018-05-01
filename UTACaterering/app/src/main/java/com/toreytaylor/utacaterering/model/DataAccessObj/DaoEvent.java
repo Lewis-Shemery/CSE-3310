@@ -22,5 +22,4 @@ public interface DaoEvent {
 
     @Query("SELECT * FROM Event where approval LIKE :approval")
     List<Event> findCatererEvents(Boolean approval);
-
 }

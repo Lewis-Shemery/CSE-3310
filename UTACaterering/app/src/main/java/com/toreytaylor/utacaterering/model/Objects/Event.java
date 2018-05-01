@@ -35,7 +35,7 @@ public class Event {
 
     private String formality;
 
-    private Boolean approval;
+    private Boolean approval = false;
 
     private String foodVenue;
 
@@ -185,7 +185,7 @@ public class Event {
         this.approval = approval;
     }
 
-    public boolean getApproval() {
+    public Boolean getApproval() {
         return approval;
     }
 }

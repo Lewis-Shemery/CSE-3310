@@ -56,6 +56,8 @@ public class PendingEvents extends FragmentActivity{
         DBManager.SearchPendingForCaterer Search
                 = new DBManager.SearchPendingForCaterer(DataBase.getInstance(this));
 
+
+
         Search.execute();
         // TODO: 4/28/2018 add progress bar to slow down program
 
